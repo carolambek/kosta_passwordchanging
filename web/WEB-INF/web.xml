@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" 
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee" 
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    
+    <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <servlet>
+        <servlet-name>AuthentificationServlet</servlet-name>
+        <servlet-class>ch.kosta.pwat.servlets.AuthentificationServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ChangePWServlet</servlet-name>
+        <servlet-class>ch.kosta.pwat.servlets.ChangePWServlet</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>AuthentificationServlet</servlet-name>
+        <url-pattern>/authentificationServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ChangePWServlet</servlet-name>
+        <url-pattern>/changePWServlet</url-pattern>
+    </servlet-mapping>
+    
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>All</web-resource-name>
+            <url-pattern>/*</url-pattern>
+        </web-resource-collection>
+        <user-data-constraint>
+            <transport-guarantee>CONFIDENTIAL</transport-guarantee>
+        </user-data-constraint>
+    </security-constraint>
+    
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>

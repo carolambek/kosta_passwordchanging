@@ -1,0 +1,43 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 25, 2018, 12:05:25 AM
+    Author     : carolek
+*/
+
+@import "bourbon";
+
+body h1 {
+    background: #F2F2F2 !important;
+    text-align: center;
+    font-size: 2.7em;
+    color: #585858;  /*text color*/
+    padding: 1em 0;
+}
+
+.wrapper {	
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.container {	
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #F2F5A9;
+    border-radius: 5px;
+}
+
+.form-signin {
+    max-width: 380px;
+    padding: 15px 35px 45px;
+    margin: 0 auto;
+    background-color: #F2F2F2;
+    border: 1px solid rgba(0,0,0,0.1);
+
+    .form-signin-heading {
+        margin-bottom: 30px;
+    }
+}
